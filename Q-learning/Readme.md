@@ -87,4 +87,4 @@ def run_episode(env, agent, render = False):
 for episode in range(2000):
     run_episode(env, agent, is_render)
 ```
-
+![alt text](show.gif)
