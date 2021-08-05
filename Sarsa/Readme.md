@@ -1,6 +1,13 @@
 # Sarsa
 This project apply sarsa algorithm on GYM clifwalking environment
 ## Agent Structure
+An agent is constructed by:
+* act_n: action dimension, 4 action in this example (up, down , left and right)
+* learning_rate: learning rate
+* e_greed: hyperparameter for epsilon-greedy strategy.
+* gamma: discount factor
+* 
+* Q: Q -value table 
 ```python
 def __init__(self, obs_n, act_n = 4, learning_rate=0.01, gamma=0.9, e_greed=0.1):
     self.lr = learning_rate
@@ -10,7 +17,22 @@ def __init__(self, obs_n, act_n = 4, learning_rate=0.01, gamma=0.9, e_greed=0.1)
     self.Q = np.zeros((obs_n, act_n))
 ```
 ## Select action
+* predict()：input a state and output an action which has the maximum Q-value among all actions at that state
+* sample()：input a state and outpu an action determine by epsilon-greedy strategy.
+
+* epsilon-greedy strategy:
+    - With epsilon probability, we perform a random action.
+    - With 1 -  epsilon probability, we perform the action has the maximum Q-value.
+        
 ```python
+
+def predict(self, S):
+        Q_values = self.Q[S]
+        maxQ = np.max(self.Q[S])
+
+        action = np.random.choice(np.where(Q_values == maxQ)[0])
+        return action
+        
 def sample(self, S):
     if np.random.uniform(0, 1) < (1.0 - self.epsilon):
         action = self.predict(S)
@@ -19,12 +41,7 @@ def sample(self, S):
 
     return action
 
-def predict(self, S):
-        Q_values = self.Q[S]
-        maxQ = np.max(self.Q[S])
 
-        action = np.random.choice(np.where(Q_values == maxQ)[0])
-        return action
 ```
 
 ## Learn
