@@ -47,7 +47,7 @@ def sample(self, S):
 ## Learn
 Update the Q table by algorithm temporal difference:
 <div align=center>
-     <img src ="Temporal Difference.png" width="400" height ="50"/>
+     <img src ="Temporal Difference.png" width="480" height ="50"/>
 </div>
 
 ```python
