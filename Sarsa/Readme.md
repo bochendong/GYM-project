@@ -89,4 +89,4 @@ for episode in range(2000):
     run_episode(env, agent, is_render)
 ```
 
-![alt text](https://github.com/bochendong/Maching_learning_Notes/blob/main/Reinforcement%20Learning/Sarsa/show.gif)
+![alt text](show.gif)
