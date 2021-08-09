@@ -7,3 +7,5 @@ A pole is attached by an un-actuated joint to a cart, which moves along a fricti
 CartPole-v0 defines "solving" as getting average reward of 195.0 over 100 consecutive trials.
 
 Check out corresponding Medium article: [Cartpole - Introduction to Reinforcement Learning (DQN - Deep Q-Learning)](https://towardsdatascience.com/cartpole-introduction-to-reinforcement-learning-ed0eb5b58288)
+
+![alt text](nontrained.gif)
