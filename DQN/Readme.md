@@ -8,4 +8,7 @@ CartPole-v0 defines "solving" as getting average reward of 195.0 over 100 consec
 
 Check out corresponding Medium article: [Cartpole - Introduction to Reinforcement Learning (DQN - Deep Q-Learning)](https://towardsdatascience.com/cartpole-introduction-to-reinforcement-learning-ed0eb5b58288)
 
-![alt text](nontrained.gif)
+
+<div align=center>
+    <img src="nontrained.gif" width="400">
+</div>
