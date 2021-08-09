@@ -12,3 +12,9 @@ Check out corresponding Medium article: [Cartpole - Introduction to Reinforcemen
 <div align=center>
     <img src="nontrained.gif" width="400">
 </div>
+
+
+## DQN
+
+The main difference between DQN and Q-learning is we do not maintain a Q-table for each state and action. In DQN, we use a deep network to relace Q-table and the network can estimate the q-value for each state and action.
+
