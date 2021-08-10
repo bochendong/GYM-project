@@ -49,7 +49,7 @@ class Q_LearningAgent(object):
         action = np.random.choice(np.where(Q_values == maxQ)[0])    # randomly choose an action has the maximum Q-value
         return action
 
-    def learn(self, S, action, reward, S_prime, action_prime, done):
+    def learn(self, S, action, reward, S_prime, done):
         predit_Q = self.Q[S, action]
 
         if (done):
@@ -69,7 +69,7 @@ def run_episode(env, agent, render = False):
         S_prime, reward, done, _ = env.step(action)
         action_prime = agent.sample(S_prime)
 
-        agent.learn(S, action, reward, S_prime, action_prime, done)
+        agent.learn(S, action, reward, S_prime, done)
 
         action = action_prime
         S = S_prime
